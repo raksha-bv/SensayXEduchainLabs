@@ -104,7 +104,10 @@ export default function Home() {
       const response = await fetch("/api/blockchain-chat", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ message: userMessage }),
+        body: JSON.stringify({
+          message: userMessage,
+          userId: "solidity_learner",
+        }),
       });
 
       if (!response.ok) {

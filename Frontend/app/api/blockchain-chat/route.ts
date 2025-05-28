@@ -6,9 +6,10 @@ import { client } from "../../../src/client/client.gen";
 function createOrganizationClient() {
   const orgClient = { ...client };
   orgClient.setConfig({
-    baseUrl: "https://api.sensay.io",
+    baseUrl: "https://api.sensay.io/v1",
     headers: {
       "X-ORGANIZATION-SECRET": process.env.SENSAY_API_KEY!,
+      "X-API-Version": "2025-05-31", // Add this line
       "Content-Type": "application/json",
     },
   });
@@ -19,10 +20,11 @@ function createOrganizationClient() {
 function createUserClient(userId: string) {
   const userClient = { ...client };
   userClient.setConfig({
-    baseUrl: "https://api.sensay.io",
+    baseUrl: "https://api.sensay.io/v1",
     headers: {
       "X-ORGANIZATION-SECRET": process.env.SENSAY_API_KEY!,
       "X-USER-ID": userId,
+      "X-API-Version": "2025-05-31", // Add this line
       "Content-Type": "application/json",
     },
   });
@@ -35,7 +37,7 @@ async function ensureUserExists(userId: string) {
   try {
     console.log(`Checking if user ${userId} exists...`);
     const user = await organizationClient.get({
-      url: `/users/${userId}`,
+      url: `users/${userId}`,
     });
     console.log("User exists:", user);
     return user;
@@ -45,7 +47,7 @@ async function ensureUserExists(userId: string) {
       console.log(`Creating new user: ${userId}`);
       try {
         const newUser = await organizationClient.post({
-          url: "/users",
+          url: "users",
           body: { id: userId },
         });
         console.log("Created new user:", newUser);
@@ -65,20 +67,22 @@ async function getOrCreateReplica(userId: string) {
   try {
     console.log(`Getting replicas for user: ${userId}`);
     const replicasResponse = await userClient.get({
-      url: "/replicas",
+      url: "replicas",
     });
 
     console.log(
       "Replicas response:",
       JSON.stringify(replicasResponse, null, 2)
     );
-    const replicas = replicasResponse as any;
 
-    // Check if we have replicas
+    // Fix: Access the data property correctly
+    const replicas = (replicasResponse as any).data;
+
+    // Check if we have replicas - fix the condition
     if (!replicas?.items || replicas.items.length === 0) {
       console.log("No replicas found, creating new one...");
       const newReplicaResponse = await userClient.post({
-        url: "/replicas",
+        url: "replicas",
         body: {
           name: `Blockchain Assistant ${Date.now()}`,
           shortDescription: "A helpful blockchain and cryptocurrency assistant",
@@ -98,14 +102,16 @@ async function getOrCreateReplica(userId: string) {
         "New replica response:",
         JSON.stringify(newReplicaResponse, null, 2)
       );
-      const newReplica = newReplicaResponse as any;
-      const replicaId = newReplica?.uuid || newReplica?.id;
+
+      // Fix: Access the UUID from the data property
+      const newReplica = (newReplicaResponse as any).data;
+      const replicaId = newReplica?.uuid;
       console.log("Created replica with ID:", replicaId);
       return replicaId;
     }
 
-    // Use the first available replica
-    const replicaId = replicas.items[0]?.uuid || replicas.items[0]?.id;
+    // Use the first available replica - fix the access
+    const replicaId = replicas.items[0]?.uuid;
     console.log("Using existing replica:", replicaId);
     return replicaId;
   } catch (error) {
@@ -150,20 +156,18 @@ export async function POST(request: Request) {
 
     console.log(`Sending message to replica ${replicaId}:`, message);
 
-    // Send message to Sensay replica
     const chatResponse = await userClient.post({
-      url: `/replicas/${replicaId}/chat`,
+      url: `replicas/${replicaId}/chat/completions`,
       body: { content: message },
     });
 
     console.log("Chat response:", JSON.stringify(chatResponse, null, 2));
-    const response = chatResponse as any;
+    const response = (chatResponse as any).data;
 
     // Try different possible response structures
     let botResponse = "";
     let success = false;
 
-    // Check various possible response formats
     if (response?.success && response?.content) {
       botResponse = response.content;
       success = true;
@@ -173,23 +177,13 @@ export async function POST(request: Request) {
     } else if (response?.response) {
       botResponse = response.response;
       success = true;
-    } else if (response?.data?.content) {
-      botResponse = response.data.content;
-      success = true;
-    } else if (response?.data?.message) {
-      botResponse = response.data.message;
-      success = true;
     } else if (typeof response === "string") {
       botResponse = response;
-      success = true;
-    } else if (response?.choices?.[0]?.message?.content) {
-      // OpenAI-style response
-      botResponse = response.choices[0].message.content;
       success = true;
     }
 
     if (success && botResponse) {
-      console.log("Successful response:", botResponse);
+      console.log("Successful response:", botResponse); // This should now log the actual content
       return NextResponse.json({
         response: botResponse,
         replicaId: replicaId,
