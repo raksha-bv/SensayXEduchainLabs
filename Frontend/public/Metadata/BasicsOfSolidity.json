@@ -1,0 +1,19 @@
+{
+  "name": "Certificate of Completion",
+  "description": "This certifies successful completion of the course: 'Basics Of Solidity'. Issued by Educhain Labs.",
+  "image": "https://aqua-rare-worm-454.mypinata.cloud/ipfs/bafybeifgnbzevbzhs4d3n4c7mkzipib4n5brfibjfts2z4zkzr42ie5xz4/2.png",
+  "attributes": [
+    {
+      "trait_type": "Course",
+      "value": "Basics Of Solidity"
+    },
+    {
+      "trait_type": "Issuer",
+      "value": "Educhain Labs"
+    },
+    {
+      "trait_type": "Type",
+      "value": "Completion Certificate"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "name": "Certificate of Completion",
+  "description": "This certifies successful completion of the course: 'Introduction to Blockchain Technology'. Issued by Educhain Labs.",
+  "image": "https://aqua-rare-worm-454.mypinata.cloud/ipfs/bafybeifgnbzevbzhs4d3n4c7mkzipib4n5brfibjfts2z4zkzr42ie5xz4/1.png",
+  "attributes": [
+    {
+      "trait_type": "Course",
+      "value": "Introduction to Blockchain Technology"
+    },
+    {
+      "trait_type": "Issuer",
+      "value": "Educhain Labs"
+    },
+    {
+      "trait_type": "Type",
+      "value": "Completion Certificate"
+    }
+  ]
+}

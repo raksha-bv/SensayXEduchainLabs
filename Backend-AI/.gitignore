@@ -1,0 +1,28 @@
+/.env
+
+# Virtual Environment
+venv/
+env/
+ENV/
+
+# Python cache files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+
+# Local development settings
+.env
+
+# Downloaded Solidity compilers
+.solcx/
+
+# Log files
+*.log
+
+# Vercel
+.vercel
