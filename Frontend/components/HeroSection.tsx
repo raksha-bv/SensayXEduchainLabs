@@ -221,7 +221,7 @@ const HeroSection = () => {
                   </div>
                   <div className="flex-1 bg-gray-800 rounded-md h-4 sm:h-5 flex items-center justify-center">
                     <span className="text-gray-400 text-[10px] sm:text-xs">
-                      edu_chain.sol
+                      sensay.sol
                     </span>
                   </div>
                 </div>
@@ -247,7 +247,7 @@ const HeroSection = () => {
                       <span className="text-blue-400">solidity</span> ^0.8.0;
                       {"\n\n"}
                       <span className="text-violet-400">contract</span>{" "}
-                      <span className="text-green-400">EduchainLab</span> {"{"}
+                      <span className="text-green-400">SensayLabs</span> {"{"}
                       {"\n"}
                       {"    "}
                       <span className="text-blue-400">

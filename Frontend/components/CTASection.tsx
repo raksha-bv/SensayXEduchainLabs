@@ -52,7 +52,7 @@ const CTASection = () => {
           <div className="bg-gray-950/80 px-4 py-1.5 border-b border-violet-900/30">
             <code className="text-xs text-gray-400 font-mono">
               <span className="text-violet-400">function</span>{" "}
-              <span className="text-green-400">joinEduchainLabs</span>() {"{"}
+              <span className="text-green-400">joinSensayLabs</span>() {"{"}
               <span className="text-blue-400"> return </span>
               <span className="text-orange-400">
                 "Build the future of Web3"

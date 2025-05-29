@@ -16,9 +16,9 @@ interface ChatbotPopupProps {
 }
 
 export const ChatbotPopup: React.FC<ChatbotPopupProps> = ({
-  buttonText = "Blockchain Expert",
-  initialMessage = "Hello! I'm your blockchain expert assistant. Ask me anything about blockchain, cryptocurrencies, or web3 technologies. How can I help you today?",
-  title = "Blockchain Expert",
+  buttonText = "Sensay AI",
+  initialMessage = "Hello! I'm Sensay ,blockchain expert assistant. Ask me anything about blockchain, cryptocurrencies, or web3 technologies. How can I help you today?",
+  title = "Sensay AI Assistant",
 }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<Message[]>([
