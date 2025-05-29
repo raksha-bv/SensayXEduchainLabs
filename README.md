@@ -1,6 +1,6 @@
 # Sensay Labs
 
-<img src="https://github.com/EduchainLabs/Showcase/blob/main/EduchainLogo.png" width=200 />
+<img src="https://github.com/raksha-bv/SensayXEduchainLabs/blob/main/Showcase/PlainLogo.png" width=200 />
 
 > Web3 Learning Platform with Solidity Practice Arena, NFT Certifications, and **Personalized AI Replica Tutors Powered by Sensay**
 
@@ -22,7 +22,7 @@
 
 Sensay Labs is a comprehensive Web3 learning platform built for the EduChain ecosystem. It combines interactive blockchain education with hands-on Solidity practice, **personalized AI replica tutors powered by Sensay**, and real-world challenge rewards. Our platform bridges the gap between theoretical blockchain knowledge and practical development skills through cutting-edge AI technology.
 
-![Platform Overview](https://github.com/EduchainLabs/Showcase/blob/main/EarlyAccess.png)
+![Platform Overview](https://github.com/raksha-bv/SensayXEduchainLabs/blob/main/Showcase/EarlyAccess.png)
 
 Sensay Labs empowers learners to:
 - Practice Solidity through a LeetCode-style code arena with real-time validation
@@ -106,7 +106,7 @@ Tackle real-world Web3 problems posted by companies with **AI replica support**.
 - **Blockchain Expertise**: Deep knowledge of Solidity, smart contracts, and Web3 development
 - **Progress Tracking**: Intelligent monitoring of your skills development and learning milestones
 
-![AI Replica Tutor](https://github.com/EduchainLabs/Showcase/blob/main/CourseChatbot.png)
+![AI Replica Tutor](https://github.com/raksha-bv/SensayXEduchainLabs/blob/main/Showcase/Chatbot.png)
 
 ### 🔹 OpenCampus ID (OCID) Integration
 Secure, decentralized authentication using OCID. Users sign in with their Web3 identity and immediately get paired with their **personal AI replica tutor**.
@@ -211,9 +211,9 @@ export SENSAY_API_URL=https://api.sensay.io
 
 ## Links
 
-- 🌐 Website: [https://sensaylabs.xyz](https://educhainlabs.vercel.app/)
+- 🌐 Website: [https://sensaylabs.xyz](https://sensaylabs.vercel.app/)
 - 🐦 X: [@sensaylabs](https://x.com/EduchainLabs)
-- 🧑‍💻 GitHub: [github.com/sensaylabs](https://github.com/EduchainLabs)
+- 🧑‍💻 GitHub: [github.com/sensaylabs](https://github.com/raksha-bv/SensayXEduchainLabs)
 - 🤖 Sensay Platform: [https://sensay.io](https://sensay.io)
 
 ## Fundraising Status
