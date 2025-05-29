@@ -18,7 +18,7 @@ export async function POST(req: NextRequest) {
 
     // Connect to MongoDB
     const client = await clientPromise;
-    const db = client.db("EduChainLabs");
+    const db = client.db("EduChainLabsDB");
     const waitlistCollection = db.collection("waitlist");
 
     // Insert waitlist entry into MongoDB

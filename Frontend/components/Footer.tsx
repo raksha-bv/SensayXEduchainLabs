@@ -15,7 +15,7 @@ const Footer = () => {
     type: "", // 'success' or 'error'
   });
 
-  const handleChange = (e : any) => {
+  const handleChange = (e: any) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({
       ...prevData,
@@ -37,7 +37,7 @@ const Footer = () => {
     }
   }, [status.message]);
 
-  const handleSubmit = async (e : any) => {
+  const handleSubmit = async (e: any) => {
     e.preventDefault();
     setStatus({ isSubmitting: true, message: "", type: "" });
 
@@ -65,7 +65,10 @@ const Footer = () => {
     } catch (error) {
       setStatus({
         isSubmitting: false,
-        message: error instanceof Error ? error.message : "Failed to send message. Please try again.",
+        message:
+          error instanceof Error
+            ? error.message
+            : "Failed to send message. Please try again.",
         type: "error",
       });
     }
@@ -99,7 +102,7 @@ const Footer = () => {
                   d="M13 10V3L4 14h7v7l9-11h-7z"
                 />
               </svg>
-              <span className="text-lg font-bold">EduChain Labs</span>
+              <span className="text-lg font-bold">Sensay Labs</span>
             </Link>
             <p className="mt-3 text-gray-400 text-sm">
               Empowering developers to build the future of Web3 through
@@ -311,9 +314,7 @@ const Footer = () => {
                   d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
                 />
               </svg>
-              <span className="break-all">
-                educhainlabs@gmail.com
-              </span>
+              <span className="break-all">educhainlabs@gmail.com</span>
             </div>
             <div className="flex items-center text-sm text-gray-400 mb-4">
               <svg
@@ -453,9 +454,7 @@ const Footer = () => {
           transition={{ duration: 0.5, delay: 0.4 }}
           viewport={{ once: true }}
         >
-          <p>
-            © {new Date().getFullYear()} EduChain Labs. All rights reserved.
-          </p>
+          <p>© {new Date().getFullYear()} Sensay Labs. All rights reserved.</p>
         </motion.div>
       </div>
     </footer>

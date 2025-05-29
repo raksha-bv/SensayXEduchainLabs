@@ -15,7 +15,7 @@ export async function GET(req: NextRequest) {
     }
 
     const client = await clientPromise;
-    const db = client.db("EduChainLabs");
+    const db = client.db("EduChainLabsDB");
     const userCoursesCollection = db.collection("userCourses");
     const coursesCollection = db.collection("courses");
 
@@ -67,7 +67,7 @@ export async function POST(req: NextRequest) {
     }
 
     const client = await clientPromise;
-    const db = client.db("EduChainLabs");
+    const db = client.db("EduChainLabsDB");
     const userCoursesCollection = db.collection("userCourses");
 
     const existingUserCourse = await userCoursesCollection.findOne({
@@ -136,7 +136,7 @@ export async function PATCH(req: NextRequest) {
     }
 
     const client = await clientPromise;
-    const db = client.db("EduChainLabs");
+    const db = client.db("EduChainLabsDB");
     const userCoursesCollection = db.collection("userCourses");
 
     const existingUserCourse = await userCoursesCollection.findOne({

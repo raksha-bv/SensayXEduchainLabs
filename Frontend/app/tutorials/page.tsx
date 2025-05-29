@@ -87,7 +87,7 @@ const TutorialPage = () => {
               <span className="text-violet-400">Web3 Environment</span>
             </h1>
             <p className="text-gray-300 md:text-lg mb-8">
-              Everything you need to start developing on the Educhain Labs
+              Everything you need to start developing on the Sensay Labs
             </p>
 
             {/* Tutorial Section Switch */}

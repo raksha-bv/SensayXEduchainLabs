@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Educhain Labs",
+  title: "Sensay Labs",
   description: "Empowering Web3 Explorers",
 };
 
@@ -25,7 +25,7 @@ export default function RootLayout({
 }>) {
   const opts = {
     clientId: "<Does_Not_Matter_For_Sandbox_mode>",
-    redirectUri: `${process.env.WEBSITE_URL}/redirect`
+    redirectUri: `${process.env.WEBSITE_URL}/redirect`,
   };
 
   return (

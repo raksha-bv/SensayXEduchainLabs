@@ -15,7 +15,7 @@ export async function POST(req: NextRequest) {
 
     // Connect to MongoDB
     const client = await clientPromise;
-    const db = client.db("EduChainLabs");
+    const db = client.db("EduChainLabsDB");
     const messagesCollection = db.collection("contact");
 
     // Insert message into MongoDB

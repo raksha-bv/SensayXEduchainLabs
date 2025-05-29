@@ -86,7 +86,7 @@ export async function checkAndGrantAchievements(
 // Add achievements to user
 async function addAchievementsToUser(OCId: string, achievements: string[]) {
   const client = await clientPromise;
-  const db = client.db("EduChainLabs");
+  const db = client.db("EduChainLabsDB");
   const usersCollection = db.collection("users");
 
   await usersCollection.updateOne(
@@ -101,7 +101,7 @@ async function addAchievementsToUser(OCId: string, achievements: string[]) {
 // Update user level based on current data
 export async function updateUserLevel(OCId: string) {
   const client = await clientPromise;
-  const db = client.db("EduChainLabs");
+  const db = client.db("EduChainLabsDB");
   const usersCollection = db.collection("users");
 
   // Get current user data

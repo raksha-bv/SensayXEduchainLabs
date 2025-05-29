@@ -67,7 +67,7 @@ const AboutPage = () => {
               </span>
             </motion.div>
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
-              About <span className="text-violet-400">Educhain Lab</span>
+              About <span className="text-violet-400">Sensay Lab</span>
             </h1>
             <p className="text-gray-300 md:text-lg mb-8">
               A Web3 learning platform built by students, for students

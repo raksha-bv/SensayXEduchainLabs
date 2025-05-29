@@ -88,7 +88,7 @@ const Navbar = () => {
             href="/"
             className="text-xl font-bold text-white flex items-center"
           >
-            <span className="text-violet-400">EDU</span>CHAIN
+            <span className="text-violet-400">SEN</span>SAY
             <span className="ml-2 text-violet-400">LABS</span>
           </Link>
         </div>

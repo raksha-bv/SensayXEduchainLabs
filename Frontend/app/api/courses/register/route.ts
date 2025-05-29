@@ -15,7 +15,7 @@ export async function POST(req: NextRequest) {
     }
 
     const client = await clientPromise;
-    const db = client.db("EduChainLabs");
+    const db = client.db("EduChainLabsDB");
     const userCoursesCollection = db.collection("userCourses");
     const coursesCollection = db.collection("courses");
 

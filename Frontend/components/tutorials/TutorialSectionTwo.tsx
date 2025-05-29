@@ -62,8 +62,8 @@ const TutorialSectionTwo = () => {
                   Get EDU Chain Testnet Tokens
                 </h3>
                 <p className="text-gray-300 mt-2">
-                  To interact with the Educhain Labs, you'll need testnet
-                  tokens. These are available through HackQuest.com.
+                  To interact with the Sensay Labs, you'll need testnet tokens.
+                  These are available through HackQuest.com.
                 </p>
               </div>
             </div>
@@ -146,7 +146,6 @@ const TutorialSectionTwo = () => {
             </div>
           </div>
 
-         
           {/* Step 1: Get EDU Chain Testnet Tokens */}
           <div className="bg-gray-900/60 backdrop-blur p-6 rounded-xl border border-violet-900/50">
             <div className="flex items-start mb-4">
@@ -276,7 +275,7 @@ const TutorialSectionTwo = () => {
                   Create Your Open Campus ID
                 </h3>
                 <p className="text-gray-300 mt-2">
-                  Follow these steps to create your OCID on Educhain Labs.
+                  Follow these steps to create your OCID on Sensay Labs.
                 </p>
               </div>
             </div>
@@ -291,19 +290,27 @@ const TutorialSectionTwo = () => {
                     <div className="w-5 h-5 bg-violet-700 rounded-full flex items-center justify-center text-xs font-bold mr-3 flex-shrink-0 mt-0.5">
                       1
                     </div>
-                    <span>Click on the Connect OCID button on the Homepage.</span>
+                    <span>
+                      Click on the Connect OCID button on the Homepage.
+                    </span>
                   </li>
                   <li className="flex items-start">
                     <div className="w-5 h-5 bg-violet-700 rounded-full flex items-center justify-center text-xs font-bold mr-3 flex-shrink-0 mt-0.5">
                       2
                     </div>
-                    <span>Click on Connect Wallet. Choose MetaMask when you get a pop up of Options of Wallet you can select.</span>
+                    <span>
+                      Click on Connect Wallet. Choose MetaMask when you get a
+                      pop up of Options of Wallet you can select.
+                    </span>
                   </li>
                   <li className="flex items-start">
                     <div className="w-5 h-5 bg-violet-700 rounded-full flex items-center justify-center text-xs font-bold mr-3 flex-shrink-0 mt-0.5">
                       3
                     </div>
-                    <span>Click on Verify and Confirm the transaction PopUp on your MetaMask.</span>
+                    <span>
+                      Click on Verify and Confirm the transaction PopUp on your
+                      MetaMask.
+                    </span>
                   </li>
                   <li className="flex items-start">
                     <div className="w-5 h-5 bg-violet-700 rounded-full flex items-center justify-center text-xs font-bold mr-3 flex-shrink-0 mt-0.5">
@@ -324,7 +331,8 @@ const TutorialSectionTwo = () => {
                       6
                     </div>
                     <span>
-                      Your OCID will be minted and You will be redirected towards the homepage.
+                      Your OCID will be minted and You will be redirected
+                      towards the homepage.
                     </span>
                   </li>
                 </ol>
@@ -355,7 +363,6 @@ const TutorialSectionTwo = () => {
               </div>
             </div>
           </div>
-          
         </motion.div>
 
         {/* Ready to Start Section */}
