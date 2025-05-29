@@ -174,7 +174,7 @@ const LoadingPage = () => {
               repeatType: "reverse",
             }}
           >
-            Educhain
+            Sensay
           </motion.span>{" "}
           <span className="relative">
             Labs
