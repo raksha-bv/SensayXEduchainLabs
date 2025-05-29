@@ -35,7 +35,7 @@ export async function createUser(
   initialData?: Partial<UserData>
 ) {
   const client = await clientPromise;
-  const db = client.db("EduChainLabsDBSensay");
+  const db = client.db("EduChainLabs");
   const usersCollection = db.collection("users");
 
   // Check if user already exists
@@ -67,7 +67,7 @@ export async function createUser(
 
 export async function getUserByOCId(OCId: string) {
   const client = await clientPromise;
-  const db = client.db("EduChainLabsDBSensay");
+  const db = client.db("EduChainLabs");
   const usersCollection = db.collection("users");
 
   return await usersCollection.findOne({ OCId });
@@ -79,7 +79,7 @@ export async function updateUserField(
   value: any
 ) {
   const client = await clientPromise;
-  const db = client.db("EduChainLabsDBSensay");
+  const db = client.db("EduChainLabs");
   const usersCollection = db.collection("users");
 
   // Create update object with the specific field to update
@@ -110,7 +110,7 @@ export async function incrementUserField(
   incrementBy: number = 1
 ) {
   const client = await clientPromise;
-  const db = client.db("EduChainLabsDBSensay");
+  const db = client.db("EduChainLabs");
   const usersCollection = db.collection("users");
 
   // Create increment object for the specific field
@@ -141,7 +141,7 @@ export async function pushToUserArray(
   value: any
 ) {
   const client = await clientPromise;
-  const db = client.db("EduChainLabsDBSensay");
+  const db = client.db("EduChainLabs");
   const usersCollection = db.collection("users");
 
   // Create push object for the specific array field
@@ -168,7 +168,7 @@ export async function pushToUserArray(
 
 export async function getTotalUsers() {
   const client = await clientPromise;
-  const db = client.db("EduChainLabsDBSensay");
+  const db = client.db("EduChainLabs");
   const usersCollection = db.collection("users");
 
   const totalUsers = await usersCollection.countDocuments({});

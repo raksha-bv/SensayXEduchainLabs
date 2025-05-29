@@ -5,7 +5,7 @@ import { Course } from "@/app/courses/page"; // Import your Course interface
 export async function migrateCourses(courses: Course[]) {
   try {
     const client = await clientPromise;
-    const db = client.db("EduChainLabsDBSensay");
+    const db = client.db("EduChainLabs");
     const coursesCollection = db.collection("courses");
 
     const bulkOps = courses.map((course) => ({
@@ -45,7 +45,7 @@ export async function migrateCourses(courses: Course[]) {
 
 export async function getAllCourses() {
   const client = await clientPromise;
-  const db = client.db("EduChainLabsDBSensay");
+  const db = client.db("EduChainLabs");
   const coursesCollection = db.collection("courses");
 
   return await coursesCollection.find({}).toArray();
@@ -53,7 +53,7 @@ export async function getAllCourses() {
 
 export async function getCourseById(courseId: string) {
   const client = await clientPromise;
-  const db = client.db("EduChainLabsDBSensay");
+  const db = client.db("EduChainLabs");
   const coursesCollection = db.collection("courses");
 
   return await coursesCollection.findOne({ id: courseId });
@@ -61,7 +61,7 @@ export async function getCourseById(courseId: string) {
 
 export async function getUserCourses(OCId: string) {
   const client = await clientPromise;
-  const db = client.db("EduChainLabsDBSensay");
+  const db = client.db("EduChainLabs");
   const userCoursesCollection = db.collection("userCourses");
 
   // Get all course IDs the user has registered for
