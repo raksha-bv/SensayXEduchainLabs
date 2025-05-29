@@ -21,7 +21,12 @@ API_KEY = os.getenv("API_KEY")
 if not API_KEY:
     print("Warning: API_KEY not found in environment variables")
     
-genai.configure(api_key=API_KEY)
+GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
+if not GEMINI_API_KEY:
+    print("Warning: GEMINI_API_KEY not found in environment variables")
+
+genai.configure(api_key=GEMINI_API_KEY)
+
 model = genai.GenerativeModel("gemini-2.0-flash")
 
 # Create Flask app
