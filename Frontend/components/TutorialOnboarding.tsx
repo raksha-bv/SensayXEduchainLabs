@@ -52,7 +52,7 @@ const TutorialOnboarding = () => {
         <div className="p-4">
           <div className="mb-3 flex justify-center">
             <span className="bg-violet-900/50 text-violet-400 text-xs font-medium px-3 py-1 rounded-full">
-              New to EduchainLabs?
+              New to SensayLabs?
             </span>
           </div>
 
